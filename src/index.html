@@ -24,7 +24,7 @@
   <!-- endinject -->
   <!-- endbuild -->
 </head>
-<body>
+<body ng-controller="AppController">
 
 <header class="header">
   <div class="container">
@@ -61,15 +61,51 @@
           </h2>
         </div>
       </div>
-      <a href="" class="btn btn-lg block-xs btn-bordered">
+      <a href="" class="btn btn-lg block-xs btn-bordered" ng-click="signup()">
         Join Community
       </a>
     </div>
   </div>
 </header>
+
 <div class="container">
 
 </div>
+
+
+<!-- Signup modal -->
+<script type="text/ng-template" id="signup_modal">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="close()" aria-label="Close">
+      <span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Join SecurityHQ</h4>
+
+    <div class="modal-subtitle">Don’t worry, Slack says it’s pretty secure.</div>
+  </div>
+  <div class="modal-body">
+    <div class="alert alert-danger" ng-show="error">
+      {{ error }}
+    </div>
+    <form ng-submit="submit()" name="signupForm" novalidate>
+      <div class="form-group"
+           ng-class="{'has-error': (signupForm.$submitted || signupForm.email.$touched) && signupForm.email.$invalid}">
+        <span class="icon icon-mail"></span>
+        <input type="email" class="form-control input-lg" name="email" ng-model="user.email" placeholder="Email" required>
+      </div>
+      <div class="form-group"
+           ng-class="{'has-error': (signupForm.$submitted || signupForm.password.$touched) && signupForm.password.$invalid}">
+        <span class="icon icon-lock"></span>
+        <input type="password" class="form-control input-lg" name="password" ng-model="user.password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block btn-login">Create your account</button>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="terms">
+      By signing up you agree to our <a href="">Terms of Service</a>.
+    </div>
+  </div>
+</script>
 
 <!-- build:js(src) scripts/vendor.js -->
 <!-- bower:js -->
