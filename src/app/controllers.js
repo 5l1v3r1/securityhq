@@ -14,21 +14,19 @@ angular.module('securityhq')
           });
       };
 
-      $scope.signupModalController = ['$scope', '$http', '$modalInstance', function ($scope, $http, $modalInstance) {
+      $scope.signupModalController = ['$scope', '$modalInstance', function ($scope, $modalInstance) {
           $scope.user = {};
 
           // Save or create item
-          $scope.submit = function () {
+          $scope.submit = function (e) {
               $scope.error = null;
               if ($scope.signupForm.$invalid) {
                   return;
               }
 
-              // For is valid - POST login data to an API
-              $http.post('/api/login', $scope.user).success(function (response) {
-                  // Do something on success
-              });
-
+              var $form = angular.element(e.target);
+              $form.attr('action', $form.attr('data-mailchimp'));
+              $form[0].submit();
           };
 
           $scope.close = function () {
