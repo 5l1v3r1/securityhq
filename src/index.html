@@ -2,17 +2,16 @@
 <html ng-app="securityhq">
 <head>
   <meta charset="utf-8">
-  <title>SecurityHQ - The Slack community for security professionals world-wide</title>
+  <title>SecurityHQ</title>
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+  <meta name="description" content="The Slack community for cyber-security professionals world-wide">
   <link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Glegoo:700' rel='stylesheet' type='text/css'>
 
-  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-  <!--<link rel="stylesheet" href="app/vendor.css">-->
   <!-- bower:css -->
   <!-- run `gulp inject` to automatically populate bower styles dependencies -->
   <!-- endbower -->
@@ -44,7 +43,7 @@
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           </li>
           <li>
-            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fsecurityhq.io&amp;width=150&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:20px;" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsecurityhq.io&amp;width=150&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:20px;" allowTransparency="true"></iframe>
           </li>
         </ul>
       </div>
@@ -53,7 +52,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-10">
 
-          <h1 class="main-slug">The Slack community for security professionals world-wide.</h1>
+          <h1 class="main-slug">The Slack community for cyber-security professionals world-wide.</h1>
 
           <h2 class="secondary-slug">
             Connect with other security professionals and start sharing stories,
@@ -115,15 +114,24 @@
       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;"><input type="text" name="b_1ef324743ad8d5b203c7fa759_68efaa3e79" tabindex="-1" value=""></div>
 
-      <button type="submit" name="subscribe" class="btn btn-lg btn-primary btn-block btn-login">Create your
-        account</button>
+      <button type="submit" name="subscribe" class="btn btn-lg btn-primary btn-block btn-login">Join community</button>
     </form>
   </div>
   <div class="modal-footer">
     <div class="terms">
-      By signing up you agree to our <a href="">Terms of Service</a>.
+      By signing up you agree to <a href="https://slack.com/terms-of-service" target="_blank">Terms of Service</a>.
     </div>
   </div>
+</script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-63224853-1', 'auto');
+  ga('send','pageview');
 </script>
 
 <!-- build:js(src) scripts/vendor.js -->

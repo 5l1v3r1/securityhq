@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('securityhq', ['ngTouch', 'ui.bootstrap']);
+angular.module('securityhq', ['ui.bootstrap']);
