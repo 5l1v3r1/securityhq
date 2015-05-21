@@ -14,7 +14,7 @@ angular.module('securityhq')
           });
       };
 
-      $scope.signupModalController = ['$scope', '$modalInstance', function ($scope, $http, $modalInstance) {
+      $scope.signupModalController = ['$scope', '$http', '$modalInstance', function ($scope, $http, $modalInstance) {
           $scope.user = {};
 
           // Save or create item
