@@ -2,8 +2,7 @@ body {
     background-image: url(../assets/images/securityhq-bg.png);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: cover;
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
         background-size: 100%;
     }
     > div.container {
@@ -50,6 +49,7 @@ body {
         margin-top: 60px;
         text-transform: uppercase;
         padding: 14px 30px;
+        letter-spacing: 1px;
         &:hover {
             color: #fff;
             border-color: #fff;
@@ -61,7 +61,7 @@ body {
     }
     .social-tools {
         margin: 0;
-        padding: 0;
+        padding: 2px 0 0 0;
         list-style: none;
         display: block;
         float: right;
